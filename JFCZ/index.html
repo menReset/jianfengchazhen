@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>见缝插针小游戏</title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        body, html {
+            height:100%;
+        }
+        body {
+            background:url(img/11.jpg) no-repeat center center;
+        }
+        .container {
+            width:300px;
+            margin:50px auto;
+        }
+        h2 {
+            font-size:35px;
+            text-align:center;
+            margin-top:150px;
+            letter-spacing:2px;
+        }
+        .play {
+            margin-top:50px;
+            text-align:center;
+        }
+        .play a {
+            display:inline-block;
+            border:1px #666 solid;
+            border-radius:8px;
+            padding:45px 25px 12px;
+            font-size:16px;
+            background:url(img/play.png) no-repeat center 12px;
+            color:#505050;
+            font-weight:bold;
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>见缝插针小游戏</h2>
+    <div class="play"> <a href="play.html" id="go">关卡<span id="level">1</span></a> </div>
+</div>
+</body>
+<script>
+    var level = parseInt(window.location.href.split("#")[1]);
+    if(level){
+        if(level==15){
+            level = 0;
+        }
+        document.getElementById("level").innerHTML = level+1;
+        document.getElementById("go").setAttribute("href","play.html#"+level);
+    }
+</script>
+</html>

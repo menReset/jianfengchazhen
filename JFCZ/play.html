@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .container{
+            position: relative;
+            width: 800px;
+            height: 800px;
+            margin: 50px auto;
+            background-color: pink;
+        }
+        #reset{
+            position: absolute;
+            top:0;
+            right:0;
+            background-color: #ff0000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color:#fff;
+        }
+        #reset:focus{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas" width="800" height="800"></canvas>
+        <button id="reset">重置关卡</button>
+    </div>
+    <script src="js/play.js"></script>
+</body>
+</html>
